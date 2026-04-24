@@ -4,7 +4,7 @@ import "../styles/globals.css";
 export const metadata: Metadata = {
   title: "NIGHTFALL DS | Eficiencia Corporativa",
   description:
-    "Arquitecturas para eliminar cuellos de botella. Automatización B2B y Agentes IA para empresas que necesitan escalar.",
+    "Tu software no debería ser el freno de tu crecimiento. Automatización B2B y Agentes IA para empresas que necesitan escalar.",
   keywords: [
     "automatización B2B",
     "agentes IA",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "NIGHTFALL DS | Eficiencia Corporativa",
     description:
-      "Arquitecturas para eliminar cuellos de botella. Automatización B2B y Agentes IA.",
+      "Tu software no debería ser el freno de tu crecimiento. Automatización B2B y Agentes IA.",
     type: "website",
   },
 };
