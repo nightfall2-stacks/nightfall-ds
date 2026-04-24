@@ -1,6 +1,23 @@
 "use client";
 
-import { IconMining, IconFintech, IconLogistics, IconEducation } from "./Icons";
+import {
+  IconMining,
+  IconFintech,
+  IconLogistics,
+  IconEducation,
+  IconAgro,
+  IconRetail,
+  IconLegal,
+  IconSalud,
+  IconInmuebles,
+  IconSaaS,
+  IconNube,
+  IconIATape,
+  IconEscala,
+  IconFluidez,
+  IconAhorro,
+  IconBlindaje,
+} from "./Icons";
 
 export function SocialProofTape() {
   const industries = [
@@ -8,6 +25,18 @@ export function SocialProofTape() {
     { icon: <IconFintech />, name: "Fintech" },
     { icon: <IconLogistics />, name: "Logística" },
     { icon: <IconEducation />, name: "Educación" },
+    { icon: <IconAgro />, name: "Agro" },
+    { icon: <IconRetail />, name: "Retail" },
+    { icon: <IconLegal />, name: "Legal" },
+    { icon: <IconSalud />, name: "Salud" },
+    { icon: <IconInmuebles />, name: "Inmuebles" },
+    { icon: <IconSaaS />, name: "SaaS" },
+    { icon: <IconNube />, name: "Nube" },
+    { icon: <IconIATape />, name: "IA" },
+    { icon: <IconEscala />, name: "Escala" },
+    { icon: <IconFluidez />, name: "Fluidez" },
+    { icon: <IconAhorro />, name: "Ahorro" },
+    { icon: <IconBlindaje />, name: "Blindaje" },
   ];
 
   return (
@@ -68,9 +97,10 @@ export function SocialProofTape() {
           }
         }
         .animate-scroll-tape {
-          animation: scroll-tape 25s linear infinite;
+          animation: scroll-tape 60s linear infinite;
         }
       `}</style>
     </section>
   );
 }
+
