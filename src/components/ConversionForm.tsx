@@ -119,7 +119,7 @@ export function ConversionForm() {
 
             {/* Trust signal */}
             <p className="text-xs text-text-tertiary mt-6">
-              Respuesta dentro de 24 horas. Nos suscribimos a tus objetivos.
+              Respuesta dentro de 24 horas. Nos comprometemos con tus objetivos.
             </p>
           </form>
         ) : (
