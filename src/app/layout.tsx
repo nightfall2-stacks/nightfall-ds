@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     "arquitectura de software",
     "eficiencia empresarial",
   ],
+  icons: {
+    icon: "/icon.svg",
+  },
   openGraph: {
     title: "NIGHTFALL DS | Eficiencia Corporativa",
     description:
