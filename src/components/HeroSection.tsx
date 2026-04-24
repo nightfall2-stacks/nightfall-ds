@@ -44,7 +44,7 @@ export function HeroSection() {
 
         {/* H1 - Massive title */}
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-text-primary leading-tight tracking-tight">
-          Arquitecturas par
+          Arquitecturas para
           <br />
           <span className="text-gradient">eliminar cuellos de botella.</span>
         </h1>
