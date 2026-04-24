@@ -8,28 +8,21 @@ const stackItems = [
   {
     icon: <CodeBlock />,
     title: "Frontend High-End.",
-    description: "Next.js y Vercel. Latencia cero y rendimiento absoluto.",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80&auto=format",
   },
   {
     icon: <CodeBlock />,
     title: "Backend Robusto.",
-    description:
-      "Node.js y PostgreSQL sobre Railway. Datos estructurados para cargas masivas.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format",
   },
   {
     icon: <CodeBlock />,
     title: "Capa Low-Code.",
-    description:
-      "Te damos el control. Interfaces para que tu gerencia modifique las automatizaciones sin depender de nosotros.",
     image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80&auto=format",
   },
   {
     icon: <CodeBlock />,
     title: "SaaS + Staffing TI.",
-    description:
-      "Proveemos la infraestructura y el talento técnico bajo demanda para asegurar que la tecnología se adopte al 100%.",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80&auto=format",
   },
 ];
@@ -92,9 +85,6 @@ function StackItem({
               <h3 className="text-2xl font-bold text-text-primary mb-3">
                 {item.title}
               </h3>
-              <p className="text-text-tertiary leading-relaxed text-lg">
-                {item.description}
-              </p>
             </div>
           </div>
         </div>
