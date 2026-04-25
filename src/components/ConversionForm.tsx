@@ -104,7 +104,7 @@ export function ConversionForm() {
         className="max-w-2xl mx-auto text-center opacity-0"
       >
         {/* Heading */}
-        <h2 className="text-5xl md:text-6xl font-black text-text-primary mb-6 leading-tight">
+        <h2 className="text-4xl md:text-6xl font-black text-text-primary mb-6 leading-tight">
           Escala tus operaciones hoy.
         </h2>
         <p className="text-lg text-text-secondary mb-16">

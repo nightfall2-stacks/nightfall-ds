@@ -43,14 +43,14 @@ export function HeroSection() {
         </div>
 
         {/* H1 - Massive title */}
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-text-primary leading-tight tracking-tight">
+        <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-text-primary leading-tight tracking-tight">
           Tu software no debería ser
           <br />
           <span className="text-gradient">el freno de tu crecimiento.</span>
         </h1>
 
         {/* H2 - Supporting copy */}
-        <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
+        <p className="text-base md:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed px-4 md:px-0">
           Reemplazamos sistemas obsoletos con ecosistemas digitales desde cero. Automatización B2B y Agentes IA para empresas que necesitan escalar sin multiplicar su planilla.
         </p>
 

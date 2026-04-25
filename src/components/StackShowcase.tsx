@@ -90,10 +90,10 @@ function StackItem({
               {item.icon}
             </div>
             <div className="flex-1">
-              <h3 className="text-2xl font-bold text-text-primary mb-3">
+              <h3 className="text-xl md:text-2xl font-bold text-text-primary mb-3">
                 {item.title}
               </h3>
-              <p className="text-text-tertiary leading-relaxed text-lg">
+              <p className="text-text-tertiary leading-relaxed text-base md:text-lg">
                 {item.description}
               </p>
             </div>
@@ -149,7 +149,7 @@ export function StackShowcase() {
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Section heading */}
         <div className="mb-20">
-          <h2 className="text-5xl md:text-6xl font-black text-text-primary leading-tight">
+          <h2 className="text-4xl md:text-6xl font-black text-text-primary leading-tight">
             No adaptamos tu negocio a una web,
             <br />
             <span className="text-accent-gold">construimos tecnología desde cero para que el sistema trabaje para ti.</span>

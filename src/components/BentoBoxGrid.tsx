@@ -69,7 +69,7 @@ function BentoCard({ card, index }: { card: Card; index: number }) {
   return (
     <div
       ref={ref}
-      className={`group relative overflow-hidden glass-effect rounded-lg p-8 transition-all duration-300 hover:border-accent-gold/30 hover:shadow-glow cursor-pointer ${card.wide ? "col-span-2" : "col-span-1"
+      className={`group relative overflow-hidden glass-effect rounded-lg p-6 md:p-8 transition-all duration-300 hover:border-accent-gold/30 hover:shadow-glow cursor-pointer ${card.wide ? "col-span-1 md:col-span-2" : "col-span-1"
         }`}
       style={{
         animationDelay: `${index * 0.1}s`,
@@ -82,7 +82,7 @@ function BentoCard({ card, index }: { card: Card; index: number }) {
 
       {/* Content */}
       <div className="relative z-10 max-w-lg">
-        <h3 className="text-2xl font-bold text-text-primary mb-3">
+        <h3 className="text-xl md:text-2xl font-bold text-text-primary mb-3">
           {card.title}
         </h3>
         <p className="text-text-tertiary leading-relaxed">{card.description}</p>
@@ -100,7 +100,7 @@ export function BentoBoxGrid() {
       <div className="max-w-7xl mx-auto">
         {/* Section heading */}
         <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-4">
             Ingeniería que acelera tu negocio.
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-accent-gold to-accent-copper rounded-full" />
