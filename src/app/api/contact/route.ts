@@ -66,8 +66,8 @@ export async function POST(req: NextRequest) {
     `;
 
     const notifResult = await resend.emails.send({
-      from: "NIGHTFALL DS <onboarding@resend.dev>",
-      to: ["nfall3746@gmail.com"],
+      from: "NIGHTFALL DS <ventas@nightfallds.lat>",
+      to: ["ventas@nightfallds.lat", "nfall3746@gmail.com"],
       subject: `🔔 Nueva solicitud de ${nameCompany}`,
       html: notificationHtml,
     });
@@ -111,7 +111,7 @@ export async function POST(req: NextRequest) {
     // Auto-response may fail if domain not verified — don't block success
     try {
       const autoResult = await resend.emails.send({
-        from: "NIGHTFALL DS <onboarding@resend.dev>",
+        from: "NIGHTFALL DS <ventas@nightfallds.lat>",
         to: [email],
         subject: "✓ Recibimos tu solicitud — NIGHTFALL DS",
         html: autoResponseHtml,
