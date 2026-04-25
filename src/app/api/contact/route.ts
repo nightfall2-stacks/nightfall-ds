@@ -1,13 +1,22 @@
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // Email validation regex
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(req: NextRequest) {
   try {
+    // Instantiate Resend at runtime, not build time
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error("RESEND_API_KEY is not configured");
+      return NextResponse.json(
+        { success: false, errors: ["Servicio de correo no configurado. Contacta por WhatsApp."] },
+        { status: 500 }
+      );
+    }
+    const resend = new Resend(apiKey);
+
     const body = await req.json();
     const { email, nameCompany, problem } = body;
 
@@ -26,15 +35,6 @@ export async function POST(req: NextRequest) {
 
     if (errors.length > 0) {
       return NextResponse.json({ success: false, errors }, { status: 400 });
-    }
-
-    // ── Check API Key ───────────────────────────────────────
-    if (!process.env.RESEND_API_KEY) {
-      console.error("RESEND_API_KEY is not configured");
-      return NextResponse.json(
-        { success: false, errors: ["Servicio de correo no configurado. Contacta por WhatsApp."] },
-        { status: 500 }
-      );
     }
 
     // ── 1. Notification email to NIGHTFALL DS team ──────────
