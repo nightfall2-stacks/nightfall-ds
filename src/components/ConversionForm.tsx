@@ -73,33 +73,25 @@ export function ConversionForm() {
     setStatus("loading");
     setErrors([]);
 
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        setErrors(data.errors || ["Error al enviar. Intenta nuevamente."]);
-        setStatus("error");
-        return;
-      }
-
+    // Simular un pequeño retraso para mostrar el spinner y dar feedback visual
+    setTimeout(() => {
       setStatus("success");
+      
+      // Construir el mensaje de WhatsApp
+      const phoneNumber = "51997470825";
+      const message = `*Nueva Solicitud de Análisis Técnico*%0A%0A*Correo:* ${formData.email}%0A*Nombre/Empresa:* ${formData.nameCompany}%0A*Problema:* ${formData.problem}`;
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+      
+      // Abrir WhatsApp en una nueva pestaña
+      window.open(whatsappUrl, "_blank");
 
-      // Reset form after 8 seconds
+      // Limpiar el formulario después de 8 segundos
       setTimeout(() => {
         setFormData({ email: "", nameCompany: "", problem: "" });
         setStatus("idle");
         setErrors([]);
       }, 8000);
-    } catch {
-      setErrors(["Error de conexión. Verifica tu internet e intenta de nuevo."]);
-      setStatus("error");
-    }
+    }, 800);
   };
 
   // Extract first name for personalized message
