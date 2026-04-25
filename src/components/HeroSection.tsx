@@ -98,7 +98,12 @@ export function HeroSection() {
 
         {/* CTA Button */}
         <div className="pt-8">
-          <button className="group relative px-8 py-4 bg-accent-gold hover:bg-accent-copper text-dark-bg font-bold text-lg rounded-full transition-all duration-300 shadow-glow hover:shadow-glow hover:shadow-lg">
+          <button 
+            onClick={() => {
+              document.getElementById('conversion-form')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="group relative px-8 py-4 bg-accent-gold hover:bg-accent-copper text-dark-bg font-bold text-lg rounded-full transition-all duration-300 shadow-glow hover:shadow-glow hover:shadow-lg"
+          >
             Iniciar Evaluación Técnica
             <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform">
               ↗

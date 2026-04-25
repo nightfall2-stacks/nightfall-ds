@@ -98,7 +98,7 @@ export function ConversionForm() {
   const firstName = formData.nameCompany.split(" ")[0] || "Cliente";
 
   return (
-    <section className="w-full bg-dark-bg py-section-gap px-6">
+    <section id="conversion-form" className="w-full bg-dark-bg py-section-gap px-6">
       <div
         ref={containerRef}
         className="max-w-2xl mx-auto text-center opacity-0"
