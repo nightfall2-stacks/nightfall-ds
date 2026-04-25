@@ -17,31 +17,31 @@ const solutionCards: Card[] = [
     icon: <IconAutomation />,
     title: "Reducción drástica de OPEX.",
     description:
-      "Diseñamos flujos de trabajo automatizados y analítica de datos en tiempo real. Eliminamos la fricción manual en logística y manufactura.",
+      "Automatizamos tus procesos manuales en logística y manufactura para reducir errores y ahorrar dinero desde el primer día.",
     wide: true,
   },
   {
     id: "2",
     icon: <IconAI />,
-    title: "IA que ejecuta, no solo responde.",
+    title: "IA que trabaja por ti.",
     description:
-      "Agentes de IA Generativa (RAG) autónomos para soporte 24/7 y resolución de consultas corporativas masivas.",
+      "Implementamos agentes inteligentes que resuelven consultas masivas y operan tu soporte 24/7 de forma autónoma.",
     wide: false,
   },
   {
     id: "3",
     icon: <IconSecurity />,
-    title: "Riesgo cero en tus datos.",
+    title: "Tus datos blindados.",
     description:
-      "Protección nativa de activos (PII/PCI) en cada despliegue. Infraestructura blindada para el sector financiero y minero.",
+      "Seguridad de nivel bancario y minero. Protegemos tu información confidencial en cada proceso para que operes sin riesgos.",
     wide: false,
   },
   {
     id: "4",
     icon: <IconEducationPlatform />,
-    title: "Ecosistema Educativo de Alta Disponibilidad.",
+    title: "Plataformas de Alta Disponibilidad.",
     description:
-      "SaaS propietario para centralizar la gestión académica, administrativa y de comunicaciones en una arquitectura escalable.",
+      "Desarrollamos software tipo SaaS a medida, diseñado para centralizar operaciones complejas en arquitecturas que escalan sin límites.",
     wide: true,
   },
 ];
@@ -69,9 +69,8 @@ function BentoCard({ card, index }: { card: Card; index: number }) {
   return (
     <div
       ref={ref}
-      className={`group relative overflow-hidden glass-effect rounded-lg p-8 transition-all duration-300 hover:border-accent-gold/30 hover:shadow-glow cursor-pointer ${
-        card.wide ? "col-span-2" : "col-span-1"
-      }`}
+      className={`group relative overflow-hidden glass-effect rounded-lg p-8 transition-all duration-300 hover:border-accent-gold/30 hover:shadow-glow cursor-pointer ${card.wide ? "col-span-2" : "col-span-1"
+        }`}
       style={{
         animationDelay: `${index * 0.1}s`,
       }}
@@ -102,7 +101,7 @@ export function BentoBoxGrid() {
         {/* Section heading */}
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
-            Ingeniería adaptada a tu Core.
+            Ingeniería que acelera tu negocio.
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-accent-gold to-accent-copper rounded-full" />
         </div>

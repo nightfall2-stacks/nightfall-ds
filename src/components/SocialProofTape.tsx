@@ -21,7 +21,7 @@ import {
 
 export function SocialProofTape() {
   const industries = [
-    { icon: <IconMining />, name: "Minería 4.0" },
+    { icon: <IconMining />, name: "Minería" },
     { icon: <IconFintech />, name: "Fintech" },
     { icon: <IconLogistics />, name: "Logística" },
     { icon: <IconEducation />, name: "Educación" },
