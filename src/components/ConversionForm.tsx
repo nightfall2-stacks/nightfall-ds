@@ -58,8 +58,7 @@ export function ConversionForm() {
           Escala tus operaciones hoy.
         </h2>
         <p className="text-lg text-text-secondary mb-16">
-          Solicita un mapa de eficiencia digital diseñado por nuestros
-          arquitectos de software.
+          Solicita una consultoría gratuita y te daremos una solución en 24 horas.
         </p>
 
         {/* Form */}
