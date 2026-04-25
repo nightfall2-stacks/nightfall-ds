@@ -28,6 +28,15 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, errors }, { status: 400 });
     }
 
+    // ── Check API Key ───────────────────────────────────────
+    if (!process.env.RESEND_API_KEY) {
+      console.error("RESEND_API_KEY is not configured");
+      return NextResponse.json(
+        { success: false, errors: ["Servicio de correo no configurado. Contacta por WhatsApp."] },
+        { status: 500 }
+      );
+    }
+
     // ── 1. Notification email to NIGHTFALL DS team ──────────
     const notificationHtml = `
       <div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #0a0a0a; color: #e0e0e0; border-radius: 12px; overflow: hidden;">
@@ -56,12 +65,14 @@ export async function POST(req: NextRequest) {
       </div>
     `;
 
-    await resend.emails.send({
+    const notifResult = await resend.emails.send({
       from: "NIGHTFALL DS <onboarding@resend.dev>",
-      to: ["ventas@nightfallds.lat", "nfall3746@gmail.com"],
+      to: ["nfall3746@gmail.com"],
       subject: `🔔 Nueva solicitud de ${nameCompany}`,
       html: notificationHtml,
     });
+
+    console.log("Notification email result:", JSON.stringify(notifResult));
 
     // ── 2. Auto-response email to the client ────────────────
     const autoResponseHtml = `
@@ -97,12 +108,19 @@ export async function POST(req: NextRequest) {
       </div>
     `;
 
-    await resend.emails.send({
-      from: "NIGHTFALL DS <onboarding@resend.dev>",
-      to: [email],
-      subject: "✓ Recibimos tu solicitud — NIGHTFALL DS",
-      html: autoResponseHtml,
-    });
+    // Auto-response may fail if domain not verified — don't block success
+    try {
+      const autoResult = await resend.emails.send({
+        from: "NIGHTFALL DS <onboarding@resend.dev>",
+        to: [email],
+        subject: "✓ Recibimos tu solicitud — NIGHTFALL DS",
+        html: autoResponseHtml,
+      });
+      console.log("Auto-response email result:", JSON.stringify(autoResult));
+    } catch (autoErr) {
+      // Log but don't fail — notification to team already sent
+      console.error("Auto-response email failed (domain not verified?):", autoErr);
+    }
 
     return NextResponse.json({
       success: true,
@@ -113,7 +131,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(
       {
         success: false,
-        errors: ["Error interno del servidor. Intenta nuevamente."],
+        errors: ["Error al enviar. Intenta nuevamente o contáctanos por WhatsApp."],
       },
       { status: 500 }
     );
