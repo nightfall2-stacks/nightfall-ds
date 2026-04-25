@@ -150,9 +150,9 @@ export function StackShowcase() {
         {/* Section heading */}
         <div className="mb-20">
           <h2 className="text-5xl md:text-6xl font-black text-text-primary leading-tight">
-            Cero plantillas.
+            No adaptamos tu negocio a una web;
             <br />
-            <span className="text-accent-gold">Código puro.</span>
+            <span className="text-accent-gold">construimos tecnología desde cero para que el sistema trabaje para ti, no al revés.</span>
           </h2>
         </div>
 
