@@ -36,10 +36,18 @@ export default function RootLayout({
         <footer className="bg-dark-bg border-t border-white/5 py-12 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <p className="text-text-tertiary text-sm">
-              © 2024 NIGHTFALL DS. Ingeniería de Eficiencia Corporativa.
+              © 2025 NIGHTFALL DS. Ingeniería de Eficiencia Corporativa.
             </p>
             <p className="text-text-tertiary text-xs mt-3">
               Arequipa, Perú — Soporte Global
+            </p>
+            <p className="mt-3">
+              <a
+                href="mailto:soporte@nightfallds.lat"
+                className="text-accent-gold/80 hover:text-accent-gold text-xs transition-colors"
+              >
+                soporte@nightfallds.lat
+              </a>
             </p>
           </div>
         </footer>
