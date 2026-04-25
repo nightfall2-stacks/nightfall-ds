@@ -41,14 +41,21 @@ export default function RootLayout({
             <p className="text-text-tertiary text-xs mt-3">
               Arequipa, Perú — Soporte Global
             </p>
-            <p className="mt-3">
+            <div className="mt-3 flex items-center justify-center gap-4">
+              <a
+                href="mailto:ventas@nightfallds.lat"
+                className="text-accent-gold/80 hover:text-accent-gold text-xs transition-colors"
+              >
+                ventas@nightfallds.lat
+              </a>
+              <span className="text-white/20 text-xs">|</span>
               <a
                 href="mailto:soporte@nightfallds.lat"
                 className="text-accent-gold/80 hover:text-accent-gold text-xs transition-colors"
               >
                 soporte@nightfallds.lat
               </a>
-            </p>
+            </div>
           </div>
         </footer>
       </body>
