@@ -150,7 +150,7 @@ export function StackShowcase() {
         {/* Section heading */}
         <div className="mb-20">
           <h2 className="text-5xl md:text-6xl font-black text-text-primary leading-tight">
-            No adaptamos tu negocio a una web;
+            No adaptamos tu negocio a una web,
             <br />
             <span className="text-accent-gold">construimos tecnología desde cero para que el sistema trabaje para ti.</span>
           </h2>
