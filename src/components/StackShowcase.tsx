@@ -7,30 +7,30 @@ import Image from "next/image";
 const stackItems = [
   {
     icon: <CodeBlock />,
-    title: "Frontend High-End.",
+    title: "Diseño de Élite (Frontend).",
     description:
-      "Interfaces ultrarrápidas que cargan al instante. Experiencias visuales que retienen a tus usuarios y multiplican conversiones.",
+      "Interfaces modernas que cargan al instante. Creamos experiencias que no solo se ven bien, sino que retienen clientes y cierran ventas.",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80&auto=format",
   },
   {
     icon: <CodeBlock />,
-    title: "Backend Robusto.",
+    title: "Potencia y Estabilidad (Backend).",
     description:
-      "Infraestructura blindada para soportar miles de operaciones simultáneas. Tus datos, siempre disponibles y protegidos.",
+      "Arquitectura blindada para soportar miles de operaciones por segundo. Tus datos siempre seguros y el sistema siempre en línea.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format",
   },
   {
     icon: <CodeBlock />,
-    title: "Capa Low-Code.",
+    title: "Control Total (Low-Code).",
     description:
-      "Tu gerencia toma el control. Paneles intuitivos para ajustar automatizaciones sin depender de un equipo técnico externo.",
+      "Tú manejas las reglas. Paneles intuitivos para que tu gerencia ajuste automatizaciones al instante sin esperar por soporte técnico.",
     image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80&auto=format",
   },
   {
     icon: <CodeBlock />,
-    title: "SaaS + Staffing TI.",
+    title: "Solución Integral y Equipo.",
     description:
-      "La plataforma y el talento, todo incluido. Garantizamos adopción al 100% con soporte dedicado para tu operación.",
+      "Te damos la plataforma y el talento humano para operarla. No solo entregamos software, nos convertimos en tu brazo tecnológico externo.",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80&auto=format",
   },
 ];
@@ -152,7 +152,7 @@ export function StackShowcase() {
           <h2 className="text-5xl md:text-6xl font-black text-text-primary leading-tight">
             No adaptamos tu negocio a una web;
             <br />
-            <span className="text-accent-gold">construimos tecnología desde cero para que el sistema trabaje para ti, no al revés.</span>
+            <span className="text-accent-gold">construimos tecnología desde cero para que el sistema trabaje para ti.</span>
           </h2>
         </div>
 
