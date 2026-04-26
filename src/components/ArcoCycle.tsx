@@ -56,8 +56,8 @@ export function ArcoCycle() {
 
   return (
     <section className="relative w-full bg-dark-bg py-section-gap px-6 border-y border-white/5">
-      <div 
-        ref={ref} 
+      <div
+        ref={ref}
         className="max-w-7xl mx-auto opacity-0"
       >
         {/* Section heading */}
@@ -65,7 +65,7 @@ export function ArcoCycle() {
           <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full glass-effect w-fit mx-auto mb-6">
             <span className="text-accent-gold">◆</span>
             <span className="text-xs font-semibold text-text-secondary tracking-widest uppercase">
-              Metodología de Crecimiento
+              Nuestar Metodología de Crecimiento
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">
@@ -79,8 +79,8 @@ export function ArcoCycle() {
         {/* Steps grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {arcoSteps.map((step, index) => (
-            <div 
-              key={step.id} 
+            <div
+              key={step.id}
               className="group relative glass-effect rounded-lg p-8 flex flex-col h-full transition-all duration-300 hover:border-accent-gold/30 hover:shadow-glow hover:-translate-y-2"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
