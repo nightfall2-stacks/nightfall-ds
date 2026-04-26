@@ -250,3 +250,24 @@ export function CodeBlock() {
     </svg>
   );
 }
+
+export function IconAnalytics() {
+  return (
+    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 52H52" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <rect x="18" y="32" width="6" height="20" stroke="currentColor" strokeWidth="2" fill="currentColor" fillOpacity="0.2"/>
+      <rect x="29" y="18" width="6" height="34" stroke="currentColor" strokeWidth="2" fill="currentColor" fillOpacity="0.2"/>
+      <rect x="40" y="24" width="6" height="28" stroke="currentColor" strokeWidth="2" fill="currentColor" fillOpacity="0.2"/>
+    </svg>
+  );
+}
+
+export function IconOptimization() {
+  return (
+    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 46L28 32L36 40L50 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M40 18H50V28" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <circle cx="50" cy="18" r="4" fill="currentColor" opacity="0.3"/>
+    </svg>
+  );
+}
