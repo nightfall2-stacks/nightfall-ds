@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-
+import Link from "next/link";
 export function HeroSection() {
   const containerRef = useRef(null);
 
@@ -98,17 +98,15 @@ export function HeroSection() {
 
         {/* CTA Button */}
         <div className="pt-8">
-          <button 
-            onClick={() => {
-              document.getElementById('conversion-form')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="group relative px-8 py-4 bg-accent-gold hover:bg-accent-copper text-dark-bg font-bold text-lg rounded-full transition-all duration-300 shadow-glow hover:shadow-glow hover:shadow-lg"
+          <Link 
+            href="/evaluacion"
+            className="inline-flex items-center justify-center group relative px-8 py-4 bg-accent-gold hover:bg-accent-copper text-dark-bg font-bold text-lg rounded-full transition-all duration-300 shadow-glow hover:shadow-glow hover:shadow-lg"
           >
             Iniciar Evaluación Técnica
             <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform">
               ↗
             </span>
-          </button>
+          </Link>
           <p className="text-xs text-text-tertiary mt-3">
             Coordina una reunión inmediata con nuestro equipo técnico
           </p>

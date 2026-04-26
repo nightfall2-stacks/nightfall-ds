@@ -2,7 +2,6 @@ import { HeroSection } from "@/components/HeroSection";
 import { SocialProofTape } from "@/components/SocialProofTape";
 import { BentoBoxGrid } from "@/components/BentoBoxGrid";
 import { StackShowcase } from "@/components/StackShowcase";
-import { ConversionForm } from "@/components/ConversionForm";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export default function Home() {
@@ -12,7 +11,6 @@ export default function Home() {
       <SocialProofTape />
       <BentoBoxGrid />
       <StackShowcase />
-      <ConversionForm />
       <WhatsAppButton />
     </main>
   );
