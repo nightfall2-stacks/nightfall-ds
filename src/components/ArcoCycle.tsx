@@ -65,7 +65,7 @@ export function ArcoCycle() {
           <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full glass-effect w-fit mx-auto mb-6">
             <span className="text-accent-gold">◆</span>
             <span className="text-xs font-semibold text-text-secondary tracking-widest uppercase">
-              Nuestar Metodología de Crecimiento
+              Nuestra Metodología de Crecimiento
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">
