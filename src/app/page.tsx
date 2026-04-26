@@ -1,5 +1,6 @@
 import { HeroSection } from "@/components/HeroSection";
 import { SocialProofTape } from "@/components/SocialProofTape";
+import { CoreIdentity } from "@/components/CoreIdentity";
 import { ArcoCycle } from "@/components/ArcoCycle";
 import { BentoBoxGrid } from "@/components/BentoBoxGrid";
 import { StackShowcase } from "@/components/StackShowcase";
@@ -10,6 +11,7 @@ export default function Home() {
     <main className="w-full">
       <HeroSection />
       <SocialProofTape />
+      <CoreIdentity />
       <ArcoCycle />
       <BentoBoxGrid />
       <StackShowcase />
