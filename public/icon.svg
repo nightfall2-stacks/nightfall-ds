@@ -1,6 +1,24 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="32" height="32" rx="6" fill="#0A0A0A"/>
-  <path d="M16 4L26 16L16 28L6 16L16 4Z" fill="#D4AF37" opacity="0.9"/>
-  <path d="M16 8L22 16L16 24L10 16L16 8Z" fill="#0A0A0A"/>
-  <path d="M16 12L19 16L16 20L13 16L16 12Z" fill="#D4AF37" opacity="0.6"/>
+<svg width="32" height="32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="120" rx="26" fill="#0A0A0A"/>
+  <defs>
+    <linearGradient id="favOrangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5500" />
+      <stop offset="100%" stop-color="#FF8C00" />
+    </linearGradient>
+    <linearGradient id="favGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#F3C34F" />
+    </linearGradient>
+    <linearGradient id="favBridgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7700" />
+      <stop offset="100%" stop-color="#D4AF37" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(0, 32)">
+    <path d="M 18 8 L 12 8 Q 8 8 8 12 L 8 24 Q 8 27 3 28 Q 8 29 8 32 L 8 44 Q 8 48 12 48 L 18 48" stroke="url(#favOrangeGrad)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 28 44 L 28 12 L 44 44 L 44 12" stroke="url(#favOrangeGrad)" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 54 44 L 54 12 C 70 12, 72 20, 72 28 C 72 36, 70 44, 54 44 Z" stroke="url(#favBridgeGrad)" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 92 16 C 92 12, 79 12, 79 19 C 79 26, 92 28, 92 35 C 92 42, 79 42, 79 38" stroke="url(#favGoldGrad)" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 102 8 L 108 8 Q 112 8 112 12 L 112 24 Q 112 27 117 28 Q 112 29 112 32 L 112 44 Q 112 48 108 48 L 102 48" stroke="url(#favGoldGrad)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
 </svg>

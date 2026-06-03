@@ -1,25 +1,44 @@
 "use client";
 
 import Link from "next/link";
+import { Logo } from "./Icons";
+
 export function HeroSection() {
   return (
-    <section className="relative w-full min-h-screen bg-dark-bg overflow-hidden flex items-center justify-center">
+    <section className="relative w-full min-h-screen bg-dark-bg overflow-hidden flex flex-col justify-between">
+      {/* Top Navbar */}
+      <header className="relative z-20 w-full max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <Logo width={70} height={32} />
+          <span className="text-text-primary font-bold text-lg tracking-wider font-mono">
+            NIGHTFALL DS
+          </span>
+        </div>
+        <Link 
+          href="/evaluacion"
+          className="px-5 py-2 rounded-full border border-white/10 hover:border-accent-gold/50 text-text-secondary hover:text-accent-gold text-sm font-semibold transition-all duration-300 glass-effect"
+        >
+          Iniciar Evaluación
+        </Link>
+      </header>
+
       {/* Radial glow background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-accent-gold/10 via-accent-copper/5 to-transparent rounded-full blur-3xl" />
       </div>
 
       {/* Content */}
-      <div
-        className="relative z-10 max-w-5xl mx-auto px-6 py-section-gap text-center space-y-8 fade-down"
-      >
-        {/* Badge */}
-        <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full glass-effect w-fit mx-auto">
-          <span className="text-accent-gold">◆</span>
-          <span className="text-xs font-semibold text-text-secondary tracking-widest uppercase">
-            Ingeniería de Eficiencia Corporativa
-          </span>
-        </div>
+      <div className="flex-grow flex items-center justify-center py-12">
+        <div
+          className="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-8 fade-down"
+        >
+          {/* Badge */}
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full glass-effect w-fit mx-auto">
+            <Logo width={22} height={10} className="opacity-90" />
+            <span className="text-xs font-semibold text-text-secondary tracking-widest uppercase">
+              Ingeniería de Eficiencia Corporativa
+            </span>
+          </div>
 
         {/* H1 - Massive title */}
         <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-text-primary leading-tight tracking-tight">
@@ -90,7 +109,11 @@ export function HeroSection() {
             Coordina una reunión inmediata con nuestro equipo técnico
           </p>
         </div>
+        </div>
       </div>
+
+      {/* Bottom spacer to balance header height */}
+      <div className="h-20 pointer-events-none hidden md:block" />
     </section>
   );
 }

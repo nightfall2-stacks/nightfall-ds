@@ -271,3 +271,34 @@ export function IconOptimization() {
     </svg>
   );
 }
+
+export function Logo({ className, width = 120, height = 56 }: { className?: string; width?: number | string; height?: number | string }) {
+  return (
+    <svg width={width} height={height} viewBox="0 0 120 56" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <defs>
+        <linearGradient id="logoOrangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#FF5500" />
+          <stop offset="100%" stop-color="#FF8C00" />
+        </linearGradient>
+        <linearGradient id="logoGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#D4AF37" />
+          <stop offset="100%" stop-color="#F3C34F" />
+        </linearGradient>
+        <linearGradient id="logoBridgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#FF7700" />
+          <stop offset="100%" stop-color="#D4AF37" />
+        </linearGradient>
+      </defs>
+      {/* { brace */}
+      <path d="M 18 8 L 12 8 Q 8 8 8 12 L 8 24 Q 8 27 3 28 Q 8 29 8 32 L 8 44 Q 8 48 12 48 L 18 48" stroke="url(#logoOrangeGrad)" strokeWidth="4.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      {/* N */}
+      <path d="M 28 44 L 28 12 L 44 44 L 44 12" stroke="url(#logoOrangeGrad)" strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      {/* D */}
+      <path d="M 54 44 L 54 12 C 70 12, 72 20, 72 28 C 72 36, 70 44, 54 44 Z" stroke="url(#logoBridgeGrad)" strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      {/* S */}
+      <path d="M 92 16 C 92 12, 79 12, 79 19 C 79 26, 92 28, 92 35 C 92 42, 79 42, 79 38" stroke="url(#logoGoldGrad)" strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      {/* } brace */}
+      <path d="M 102 8 L 108 8 Q 112 8 112 12 L 112 24 Q 112 27 117 28 Q 112 29 112 32 L 112 44 Q 112 48 108 48 L 102 48" stroke="url(#logoGoldGrad)" strokeWidth="4.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}

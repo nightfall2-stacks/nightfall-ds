@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
+import { Logo } from "@/components/Icons";
 
 export const metadata: Metadata = {
   title: "NIGHTFALL DS | Eficiencia Corporativa",
@@ -46,7 +47,8 @@ export default function RootLayout({
 
             {/* Footer */}
             <footer className="bg-dark-bg border-t border-white/5 py-12 px-6">
-              <div className="max-w-7xl mx-auto text-center">
+              <div className="max-w-7xl mx-auto text-center flex flex-col items-center">
+                <Logo width={70} height={32} className="mb-4 opacity-80 hover:opacity-100 transition-opacity" />
                 <p className="text-text-tertiary text-sm">
                   © 2025 NIGHTFALL DS. Ingeniería de Eficiencia Corporativa.
                 </p>
