@@ -56,7 +56,7 @@ function BentoCard({ card, index }: { card: Card; index: number }) {
           entry.target.classList.add("fade-up");
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
 
     if (ref.current) {
@@ -69,7 +69,7 @@ function BentoCard({ card, index }: { card: Card; index: number }) {
   return (
     <div
       ref={ref}
-      className={`group relative overflow-hidden glass-effect rounded-lg p-6 md:p-8 transition-all duration-300 hover:border-accent-gold/30 hover:shadow-glow cursor-pointer ${card.wide ? "col-span-1 md:col-span-2" : "col-span-1"
+      className={`group relative overflow-hidden glass-effect rounded-lg p-6 md:p-8 transition-all duration-300 hover:border-accent-gold/30 hover:shadow-glow cursor-pointer opacity-0 ${card.wide ? "col-span-1 md:col-span-2" : "col-span-1"
         }`}
       style={{
         animationDelay: `${index * 0.1}s`,

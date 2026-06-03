@@ -44,7 +44,7 @@ export function ArcoCycle() {
           entry.target.classList.add("fade-up");
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.05 }
     );
 
     if (ref.current) {

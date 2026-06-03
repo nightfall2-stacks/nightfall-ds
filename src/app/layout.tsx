@@ -38,7 +38,10 @@ export default function RootLayout({
             <p className="text-text-tertiary text-sm">
               © 2025 NIGHTFALL DS. Ingeniería de Eficiencia Corporativa.
             </p>
-            <p className="text-text-tertiary text-xs mt-3">
+            <p className="text-text-tertiary text-xs mt-2 font-mono tracking-wide">
+              RUC: 20615956491
+            </p>
+            <p className="text-text-tertiary text-xs mt-2">
               Arequipa, Perú — Soporte Global
             </p>
             <div className="mt-3 flex items-center justify-center gap-4">

@@ -1,27 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import Link from "next/link";
 export function HeroSection() {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("fade-down");
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section className="relative w-full min-h-screen bg-dark-bg overflow-hidden flex items-center justify-center">
       {/* Radial glow background */}
@@ -31,8 +11,7 @@ export function HeroSection() {
 
       {/* Content */}
       <div
-        ref={containerRef}
-        className="relative z-10 max-w-5xl mx-auto px-6 py-section-gap text-center space-y-8"
+        className="relative z-10 max-w-5xl mx-auto px-6 py-section-gap text-center space-y-8 fade-down"
       >
         {/* Badge */}
         <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full glass-effect w-fit mx-auto">

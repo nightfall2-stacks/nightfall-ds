@@ -42,31 +42,8 @@ function StackItem({
   item: (typeof stackItems)[0];
   index: number;
 }) {
-  const ref = useRef(null);
-  const isVisible = useRef(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !isVisible.current) {
-          isVisible.current = true;
-          entry.target.classList.add("fade-up");
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div
-      ref={ref}
-      className="opacity-0"
       style={{
         animationDelay: `${index * 0.15}s`,
       }}
@@ -119,7 +96,7 @@ export function StackShowcase() {
           });
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
