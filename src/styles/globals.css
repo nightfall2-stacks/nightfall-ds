@@ -100,3 +100,49 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Premium Dotted Gold Grid Background */
+.bg-grid-dots {
+  background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1.2px, transparent 1.2px);
+  background-size: 28px 28px;
+}
+
+/* Floating Ambient Glow Animations */
+@keyframes float-slow-1 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(40px, -60px) scale(1.1);
+  }
+}
+
+@keyframes float-slow-2 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(-60px, 40px) scale(0.9);
+  }
+}
+
+@keyframes float-slow-3 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(30px, 50px) scale(1.05);
+  }
+}
+
+.animate-float-slow-1 {
+  animation: float-slow-1 25s ease-in-out infinite;
+}
+
+.animate-float-slow-2 {
+  animation: float-slow-2 30s ease-in-out infinite;
+}
+
+.animate-float-slow-3 {
+  animation: float-slow-3 28s ease-in-out infinite;
+}
