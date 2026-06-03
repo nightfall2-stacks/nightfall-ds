@@ -13,7 +13,11 @@ export const metadata: Metadata = {
     "eficiencia empresarial",
   ],
   icons: {
-    icon: "/icon.svg",
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", type: "image/png" }
+    ],
+    shortcut: "/favicon.ico",
   },
   openGraph: {
     title: "NIGHTFALL DS | Eficiencia Corporativa",
