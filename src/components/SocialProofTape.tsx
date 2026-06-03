@@ -99,6 +99,11 @@ export function SocialProofTape() {
         .animate-scroll-tape {
           animation: scroll-tape 60s linear infinite;
         }
+        .animate-scroll-tape svg {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
       `}</style>
     </section>
   );
