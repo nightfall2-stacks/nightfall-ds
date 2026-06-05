@@ -41,7 +41,7 @@ const solutionCards: Card[] = [
     icon: <IconEducationPlatform />,
     title: "Plataformas de Alta Disponibilidad.",
     description:
-      "Desarrollamos software tipo SaaS a medida, diseñado para centralizar operaciones complejas en arquitecturas que escalan sin límites.",
+      "Desarrollamos software a medida, diseñado para centralizar operaciones complejas en arquitecturas que escalan sin límites.",
     wide: true,
   },
 ];
