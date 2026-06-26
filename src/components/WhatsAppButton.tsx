@@ -19,8 +19,8 @@ export function WhatsAppButton() {
       {/* Label */}
       <div
         className={`bg-white text-gray-900 text-sm font-semibold px-4 py-2 rounded-full shadow-lg transition-all duration-500 ${showLabel
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-2"
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-2"
           }`}
       >
         ¡Contáctanos ahora!

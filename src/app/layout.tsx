@@ -74,7 +74,7 @@ export default function RootLayout({
                     href="mailto:contacto@nightfallds.lat"
                     className="text-accent-gold/80 hover:text-accent-gold text-xs transition-colors"
                   >
-                    soporte@nightfallds.lat
+                    contacto@nightfallds.lat
                   </a>
                 </div>
               </div>
