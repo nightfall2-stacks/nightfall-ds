@@ -38,7 +38,7 @@ export default function RootLayout({
         <div className="relative min-h-screen w-full overflow-hidden">
           {/* Global Dotted Grid Background */}
           <div className="absolute inset-0 bg-grid-dots pointer-events-none opacity-60" />
-          
+
           {/* Global Ambient Glows */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
             <div className="absolute top-[10%] left-[5%] w-[450px] h-[450px] bg-accent-gold/4 rounded-full blur-[110px] animate-float-slow-1" />
@@ -71,7 +71,7 @@ export default function RootLayout({
                   </a>
                   <span className="text-white/20 text-xs">|</span>
                   <a
-                    href="mailto:soporte@nightfallds.lat"
+                    href="mailto:contacto@nightfallds.lat"
                     className="text-accent-gold/80 hover:text-accent-gold text-xs transition-colors"
                   >
                     soporte@nightfallds.lat

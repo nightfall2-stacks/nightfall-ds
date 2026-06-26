@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 export function WhatsAppButton() {
-  const phoneNumber = "51997470825";
+  const phoneNumber = "51972381790";
   const message = "Hola, me gustaría conocer más sobre los servicios de NIGHTFALL DS";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   const [showLabel, setShowLabel] = useState(false);
@@ -18,11 +18,10 @@ export function WhatsAppButton() {
     <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-2">
       {/* Label */}
       <div
-        className={`bg-white text-gray-900 text-sm font-semibold px-4 py-2 rounded-full shadow-lg transition-all duration-500 ${
-          showLabel
+        className={`bg-white text-gray-900 text-sm font-semibold px-4 py-2 rounded-full shadow-lg transition-all duration-500 ${showLabel
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-2"
-        }`}
+          }`}
       >
         ¡Contáctanos ahora!
         {/* Small triangle pointing down */}
