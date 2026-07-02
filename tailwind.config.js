@@ -17,7 +17,7 @@ export default {
         mono: ["Roboto Mono", "ui-monospace", "monospace"],
       },
       spacing: {
-        "section-gap": "96px",
+        "section-gap": "clamp(4rem, 8vw, 6rem)",
         "hero-padding": "120px",
       },
       animation: {

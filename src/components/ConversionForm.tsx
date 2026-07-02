@@ -26,7 +26,7 @@ export function ConversionForm() {
   }, []);
 
   return (
-    <section id="conversion-form" className="w-full bg-[#0A0A0A] py-24 px-6 min-h-[85vh] flex flex-col justify-center">
+    <section id="conversion-form" className="w-full bg-[#0A0A0A] py-16 md:py-24 px-4 md:px-6 min-h-[85vh] flex flex-col justify-center">
       <div
         ref={containerRef}
         className="max-w-2xl mx-auto text-center opacity-0"
@@ -43,7 +43,7 @@ export function ConversionForm() {
         {!state.succeeded ? (
           <form
             onSubmit={handleSubmit}
-            className="space-y-6 max-w-lg mx-auto bg-zinc-900/50 p-8 rounded-2xl border border-zinc-800"
+            className="space-y-6 max-w-lg mx-auto bg-zinc-900/50 p-6 md:p-8 rounded-2xl border border-zinc-800"
           >
             {/* Email */}
             <div className="relative">
@@ -113,7 +113,7 @@ export function ConversionForm() {
           </form>
         ) : (
           /* Success state */
-          <div className="max-w-lg mx-auto py-12 text-center fade-up bg-zinc-900/50 p-8 rounded-2xl border border-zinc-800">
+          <div className="max-w-lg mx-auto py-12 text-center fade-up bg-zinc-900/50 p-6 md:p-8 rounded-2xl border border-zinc-800">
             <CheckCircle2 className="w-16 h-16 text-emerald-500 mx-auto mb-6" />
             <h3 className="text-2xl font-bold text-zinc-50 mb-3">
               Gracias por escribirnos.

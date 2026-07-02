@@ -60,7 +60,7 @@ export function CoreIdentity() {
       <div ref={containerRef} className="max-w-5xl mx-auto opacity-0">
 
         {/* Mission and Vision Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16 md:mb-24">
           {/* Mission */}
           <div className="bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 rounded-lg p-8 md:p-10 transition-colors duration-200">
             <h2 className="text-xs font-semibold tracking-widest text-zinc-500 uppercase mb-5">

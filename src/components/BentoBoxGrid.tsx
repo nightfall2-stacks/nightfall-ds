@@ -109,7 +109,7 @@ export function BentoBoxGrid() {
         </div>
 
         {/* Bento grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {solutionCards.map((card) => (
             <BentoCard key={card.id} card={card} />
           ))}
