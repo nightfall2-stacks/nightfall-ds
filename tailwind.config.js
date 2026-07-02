@@ -9,38 +9,28 @@ export default {
     extend: {
       colors: {
         "dark-bg": "#0A0A0A",
-        "dark-card": "#1A1A1A",
-        "text-primary": "#FFFFFF",
-        "text-secondary": "#EDEDED",
-        "text-tertiary": "#888888",
-        "accent-gold": "#D4AF37",
-        "accent-copper": "#C17817",
+        "dark-card": "#141414",
+        "dark-border": "#1E1E1E",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        mono: ["Roboto Mono", "monospace"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+        mono: ["Roboto Mono", "ui-monospace", "monospace"],
       },
       spacing: {
-        "section-gap": "80px",
+        "section-gap": "96px",
         "hero-padding": "120px",
       },
       animation: {
         "scroll-tape": "scroll-tape 20s linear infinite",
-        "glow-pulse": "glow-pulse 3s ease-in-out infinite",
       },
       keyframes: {
         "scroll-tape": {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
-        "glow-pulse": {
-          "0%, 100%": { opacity: "0.5" },
-          "50%": { opacity: "1" },
-        },
       },
       boxShadow: {
-        "glass": "0 8px 32px 0 rgba(0, 0, 0, 0.5)",
-        "glow": "0 0 40px rgba(212, 175, 55, 0.2)",
+        "subtle": "0 1px 2px 0 rgba(0, 0, 0, 0.4)",
       },
     },
   },

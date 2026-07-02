@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { IconAutomation, IconAI, IconSecurity, IconEducationPlatform } from "./Icons";
+import { Workflow, Bot, ShieldCheck, LayoutDashboard } from "lucide-react";
 
 interface Card {
   id: string;
-  icon: React.ReactNode;
+  icon: typeof Workflow;
   title: string;
   description: string;
   wide: boolean;
@@ -14,39 +14,39 @@ interface Card {
 const solutionCards: Card[] = [
   {
     id: "1",
-    icon: <IconAutomation />,
-    title: "Reducción drástica de OPEX.",
+    icon: Workflow,
+    title: "Automatización de procesos internos.",
     description:
-      "Automatizamos tus procesos manuales en logística y manufactura para reducir errores y ahorrar dinero desde el primer día.",
+      "Si tu equipo copia datos entre sistemas, genera reportes manualmente o depende de Excel para operaciones críticas — eso es deuda operativa. La reemplazamos con pipelines automatizados y APIs que conectan tus sistemas. ROI medido en horas-persona recuperadas.",
     wide: true,
   },
   {
     id: "2",
-    icon: <IconAI />,
-    title: "IA que trabaja por ti.",
+    icon: Bot,
+    title: "Agentes IA en producción.",
     description:
-      "Implementamos agentes inteligentes que resuelven consultas masivas y operan tu soporte 24/7 de forma autónoma.",
+      "Agentes con LLMs fine-tuned para tareas específicas: clasificación de tickets, extracción de datos, soporte L1 automatizado. Con guardrails, observabilidad y fallbacks definidos.",
     wide: false,
   },
   {
     id: "3",
-    icon: <IconSecurity />,
-    title: "Tus datos blindados.",
+    icon: ShieldCheck,
+    title: "Seguridad desde la arquitectura.",
     description:
-      "Seguridad de nivel bancario y minero. Protegemos tu información confidencial en cada proceso para que operes sin riesgos.",
+      "HTTPS everywhere, secrets en vault, menor privilegio, JWT con refresh tokens rotados, audit logs inmutables. Está en cada capa desde el primer commit.",
     wide: false,
   },
   {
     id: "4",
-    icon: <IconEducationPlatform />,
-    title: "Plataformas de Alta Disponibilidad.",
+    icon: LayoutDashboard,
+    title: "Plataformas B2B a medida.",
     description:
-      "Desarrollamos software a medida, diseñado para centralizar operaciones complejas en arquitecturas que escalan sin límites.",
+      "ERPs, CRMs internos, portales de proveedores — software que tu equipo usa 8 horas al día y no existe como SaaS para tu industria. Lo diseñamos contigo, lo construimos con nuestro stack, y te entregamos el código. Sin vendor lock-in.",
     wide: true,
   },
 ];
 
-function BentoCard({ card, index }: { card: Card; index: number }) {
+function BentoCard({ card }: { card: Card }) {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -66,50 +66,52 @@ function BentoCard({ card, index }: { card: Card; index: number }) {
     return () => observer.disconnect();
   }, []);
 
+  const IconComponent = card.icon;
+
   return (
     <div
       ref={ref}
-      className={`group relative overflow-hidden glass-effect rounded-lg p-6 md:p-8 transition-all duration-300 hover:border-accent-gold/30 hover:shadow-glow cursor-pointer opacity-0 ${card.wide ? "col-span-1 md:col-span-2" : "col-span-1"
-        }`}
-      style={{
-        animationDelay: `${index * 0.1}s`,
-      }}
+      className={`group relative bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 rounded-lg p-6 md:p-8 transition-all duration-200 opacity-0 ${
+        card.wide ? "col-span-1 md:col-span-2" : "col-span-1"
+      }`}
     >
-      {/* Icon in corner */}
-      <div className="absolute top-6 right-6 w-16 h-16 text-accent-gold opacity-20 group-hover:opacity-30 transition-opacity flex-shrink-0">
-        {card.icon}
+      {/* Icon */}
+      <div className="w-9 h-9 rounded-md bg-zinc-800/80 flex items-center justify-center mb-4 group-hover:bg-zinc-700/80 transition-colors">
+        <IconComponent className="text-zinc-400 group-hover:text-zinc-200 transition-colors" size={18} />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-lg">
-        <h3 className="text-xl md:text-2xl font-bold text-text-primary mb-3">
+      <div className="max-w-lg">
+        <h3 className="text-base font-semibold text-zinc-100 mb-2">
           {card.title}
         </h3>
-        <p className="text-text-tertiary leading-relaxed">{card.description}</p>
+        <p className="text-sm text-zinc-400 leading-relaxed">
+          {card.description}
+        </p>
       </div>
-
-      {/* Subtle hover effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg" />
     </div>
   );
 }
 
 export function BentoBoxGrid() {
   return (
-    <section className="relative w-full bg-dark-bg py-section-gap px-6">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative w-full bg-[#0A0A0A] py-section-gap px-6">
+      <div className="max-w-5xl mx-auto">
         {/* Section heading */}
-        <div className="mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-4">
-            Ingeniería que acelera tu negocio.
+        <div className="mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-zinc-50 mb-3">
+            Lo que construimos.
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-accent-gold to-accent-copper rounded-full" />
+          <p className="text-zinc-400 max-w-xl">
+            Software que resuelve problemas reales de operación. Sin plantillas,
+            sin WordPress disfrazado, sin dependencia de terceros.
+          </p>
         </div>
 
         {/* Bento grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {solutionCards.map((card, index) => (
-            <BentoCard key={card.id} card={card} index={index} />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {solutionCards.map((card) => (
+            <BentoCard key={card.id} card={card} />
           ))}
         </div>
       </div>

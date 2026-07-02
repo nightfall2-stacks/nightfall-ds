@@ -31,34 +31,34 @@ export function SocialProofTape() {
     { icon: <IconSalud />, name: "Salud" },
     { icon: <IconInmuebles />, name: "Inmuebles" },
     { icon: <IconSaaS />, name: "SaaS" },
-    { icon: <IconNube />, name: "Nube" },
+    { icon: <IconNube />, name: "Cloud" },
     { icon: <IconIATape />, name: "IA" },
     { icon: <IconEscala />, name: "Escala" },
     { icon: <IconFluidez />, name: "Fluidez" },
     { icon: <IconAhorro />, name: "Ahorro" },
-    { icon: <IconBlindaje />, name: "Blindaje" },
+    { icon: <IconBlindaje />, name: "Seguridad" },
   ];
 
   return (
-    <section className="w-full bg-dark-bg py-16 overflow-hidden border-y border-white/5">
+    <section className="w-full bg-[#0A0A0A] py-12 overflow-hidden border-y border-zinc-800/50">
       <div className="max-w-7xl mx-auto px-6">
-        <p className="text-xs font-bold text-text-tertiary tracking-widest uppercase text-center mb-12">
+        <p className="text-[11px] font-medium text-zinc-600 tracking-widest uppercase text-center mb-10">
           Infraestructura diseñada para operaciones críticas en:
         </p>
 
         {/* Infinite scroll tape */}
         <div className="relative overflow-hidden">
-          <div className="flex gap-16 animate-scroll-tape">
+          <div className="flex gap-12 animate-scroll-tape">
             {/* Original set */}
             {industries.map((industry, i) => (
               <div
                 key={`original-${i}`}
-                className="flex items-center gap-3 whitespace-nowrap flex-shrink-0"
+                className="flex items-center gap-2.5 whitespace-nowrap flex-shrink-0"
               >
-                <div className="w-8 h-8 text-accent-gold flex-shrink-0">
+                <div className="w-7 h-7 text-zinc-600 flex-shrink-0">
                   {industry.icon}
                 </div>
-                <span className="text-sm font-semibold text-text-secondary">
+                <span className="text-sm font-medium text-zinc-500">
                   {industry.name}
                 </span>
               </div>
@@ -68,12 +68,12 @@ export function SocialProofTape() {
             {industries.map((industry, i) => (
               <div
                 key={`duplicate-${i}`}
-                className="flex items-center gap-3 whitespace-nowrap flex-shrink-0"
+                className="flex items-center gap-2.5 whitespace-nowrap flex-shrink-0"
               >
-                <div className="w-8 h-8 text-accent-gold flex-shrink-0">
+                <div className="w-7 h-7 text-zinc-600 flex-shrink-0">
                   {industry.icon}
                 </div>
-                <span className="text-sm font-semibold text-text-secondary">
+                <span className="text-sm font-medium text-zinc-500">
                   {industry.name}
                 </span>
               </div>
@@ -81,8 +81,8 @@ export function SocialProofTape() {
           </div>
 
           {/* Gradient fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-dark-bg to-transparent pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-dark-bg to-transparent pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#0A0A0A] to-transparent pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#0A0A0A] to-transparent pointer-events-none" />
         </div>
       </div>
 
@@ -108,4 +108,3 @@ export function SocialProofTape() {
     </section>
   );
 }
-

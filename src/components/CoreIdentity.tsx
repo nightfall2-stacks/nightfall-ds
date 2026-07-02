@@ -5,28 +5,33 @@ import { useEffect, useRef } from "react";
 const values = [
   {
     num: "01",
-    title: "Frialdad Estratégica",
-    description: "Frente a la saturación operativa de nuestros clientes, tomamos distancia para evaluar con objetividad. Separamos la frustración del problema estructural para diseñar soluciones basadas estrictamente en datos y ROI. Entregamos respuestas frías y precisas a problemas críticos.",
+    title: "Opiniones Fuertes, Código Auditable",
+    description:
+      "Tenemos un stack definido y lo defendemos con datos. No elegimos tecnologías por popularidad — las elegimos porque las hemos llevado a producción y sabemos dónde fallan. Si algo no lo dominamos, lo decimos antes de firmar.",
   },
   {
     num: "02",
-    title: "Ingeniería Pura",
-    description: "Rechazamos las plantillas genéricas porque respetamos la complejidad de tu negocio. Desarrollamos tecnología con rigor y artesanía digital, garantizando que cada línea de código que entregamos no sea un gasto, sino un activo que revalorice tu empresa.",
+    title: "Código Limpio como Estándar Mínimo",
+    description:
+      "Cada pull request pasa por code review. Cada módulo tiene tests. Cada función tiene un nombre que explica lo que hace. El código que escribimos hoy lo va a mantener otro ingeniero en 18 meses.",
   },
   {
     num: "03",
-    title: "Disponibilidad Absoluta",
-    description: "Entendemos que un sistema caído genera pánico financiero. Diseñamos infraestructuras resilientes con un solo objetivo en mente: que tú y tu equipo puedan descansar, sabiendo que nuestros ecosistemas están construidos para soportar la carga y no fallar.",
+    title: "Uptime No Es Negociable",
+    description:
+      "Circuit breakers, health checks, retry con exponential backoff, y alertas que nos despiertan a las 3 AM antes de que el cliente se entere. Si prometemos 99.9%, está en el contrato.",
   },
   {
     num: "04",
-    title: "Seguridad por Diseño",
-    description: "La protección de los datos de tu empresa no es un módulo adicional; es nuestro cimiento. Actuamos como la primera línea de defensa digital, integrando prevención de pérdida de datos (DLP) para que operes y crezcas sin el miedo constante a vulnerabilidades externas.",
+    title: "Seguridad en Cada Capa",
+    description:
+      "HTTPS everywhere, secrets en vault, menor privilegio en cada servicio, auth con tokens rotados, y audit logs inmutables. No es un módulo adicional — está desde el primer commit.",
   },
   {
     num: "05",
-    title: "Abstracción Inteligente",
-    description: "Ocultamos la extrema complejidad tecnológica en el backend para entregarte simplicidad absoluta en el frontend. Creamos herramientas e interfaces tan intuitivas que tu equipo directivo se sentirá poderoso al usarlas y gestionar sus flujos, no intimidado por la tecnología.",
+    title: "Entregamos Propiedad, No Dependencia",
+    description:
+      "El código fuente es tuyo. La documentación es tuya. Los runbooks son tuyos. Si nos vuelves a llamar, es porque quieres — no porque no puedas operar sin nosotros.",
   },
 ];
 
@@ -51,64 +56,63 @@ export function CoreIdentity() {
   }, []);
 
   return (
-    <section className="relative w-full bg-dark-bg py-section-gap px-6">
-      <div ref={containerRef} className="max-w-7xl mx-auto opacity-0">
-        
+    <section className="relative w-full bg-[#0A0A0A] py-section-gap px-6">
+      <div ref={containerRef} className="max-w-5xl mx-auto opacity-0">
+
         {/* Mission and Vision Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 mb-24">
-          
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-24">
           {/* Mission */}
-          <div className="relative glass-effect rounded-2xl p-10 md:p-14 border border-white/5 overflow-hidden group hover:border-accent-gold/20 transition-colors duration-500">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-accent-gold/5 blur-3xl rounded-full -translate-y-1/2 translate-x-1/4 pointer-events-none group-hover:bg-accent-gold/10 transition-colors duration-500" />
-            <h2 className="text-sm font-bold tracking-widest text-accent-gold uppercase mb-6">
+          <div className="bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 rounded-lg p-8 md:p-10 transition-colors duration-200">
+            <h2 className="text-xs font-semibold tracking-widest text-zinc-500 uppercase mb-5">
               Misión
             </h2>
-            <p className="text-xl md:text-2xl text-text-primary leading-relaxed font-medium">
-              "Devolver el control y la tranquilidad operativa a los tomadores de decisiones. Transformamos la incertidumbre y el desgaste de los procesos manuales en infraestructuras de eficiencia crítica. Construimos ecosistemas digitales que permiten a las empresas escalar con la absoluta confianza de que su operación jamás se detendrá."
+            <p className="text-lg text-zinc-200 leading-relaxed font-medium">
+              &quot;Construir software que funcione en producción bajo carga real, que otro ingeniero pueda entender sin preguntarle al autor, y que le devuelva a nuestros clientes las horas que hoy pierden en procesos manuales y sistemas frágiles.&quot;
             </p>
           </div>
 
           {/* Vision */}
-          <div className="relative glass-effect rounded-2xl p-10 md:p-14 border border-white/5 overflow-hidden group hover:border-accent-copper/20 transition-colors duration-500">
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent-copper/5 blur-3xl rounded-full translate-y-1/2 -translate-x-1/4 pointer-events-none group-hover:bg-accent-copper/10 transition-colors duration-500" />
-            <h2 className="text-sm font-bold tracking-widest text-accent-copper uppercase mb-6">
+          <div className="bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 rounded-lg p-8 md:p-10 transition-colors duration-200">
+            <h2 className="text-xs font-semibold tracking-widest text-zinc-500 uppercase mb-5">
               Visión
             </h2>
-            <p className="text-xl md:text-2xl text-text-primary leading-relaxed font-medium">
-              "Ser el respaldo invisible e inquebrantable detrás de los motores económicos de la región. Queremos que las empresas más exigentes tengan la certeza de que, mientras ellos lideran y expanden su industria, nuestra ingeniería blinda su tecnología."
+            <p className="text-lg text-zinc-200 leading-relaxed font-medium">
+              &quot;Ser el estudio de ingeniería que las empresas llaman cuando ya se cansaron de agencias que entregan MVPs que nunca llegan a producción. Que nos elijan por la calidad del código, no por el pitch de ventas.&quot;
             </p>
           </div>
         </div>
 
-        {/* Corporate Values */}
+        {/* Values */}
         <div className="relative">
-          <div className="mb-12 text-center md:text-left">
-            <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-4">
-              Nuestro ADN Corporativo
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-zinc-50 mb-3">
+              Cómo Trabajamos
             </h2>
-            <div className="w-16 h-1 bg-gradient-to-r from-accent-gold to-accent-copper rounded-full mx-auto md:mx-0" />
+            <p className="text-zinc-400 max-w-xl">
+              No son valores de poster. Son reglas que aplicamos en cada commit,
+              cada code review y cada deploy.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {values.map((val, idx) => (
-              <div 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {values.map((val) => (
+              <div
                 key={val.num}
-                className="group p-8 rounded-lg glass-effect border border-white/5 hover:border-accent-gold/30 hover:-translate-y-1 transition-all duration-300"
+                className="group bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 rounded-lg p-6 transition-all duration-200"
               >
-                <div className="text-4xl font-black text-white/5 group-hover:text-accent-gold/20 transition-colors mb-6">
+                <div className="text-3xl font-black text-zinc-800 group-hover:text-zinc-700 transition-colors mb-4 font-mono">
                   {val.num}
                 </div>
-                <h3 className="text-xl font-bold text-text-primary mb-4 group-hover:text-accent-gold transition-colors">
+                <h3 className="text-base font-semibold text-zinc-100 mb-3 group-hover:text-zinc-50 transition-colors">
                   {val.title}
                 </h3>
-                <p className="text-text-secondary leading-relaxed">
+                <p className="text-sm text-zinc-400 leading-relaxed">
                   {val.description}
                 </p>
               </div>
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

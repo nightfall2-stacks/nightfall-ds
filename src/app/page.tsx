@@ -4,6 +4,8 @@ import { CoreIdentity } from "@/components/CoreIdentity";
 import { ArcoCycle } from "@/components/ArcoCycle";
 import { BentoBoxGrid } from "@/components/BentoBoxGrid";
 import { StackShowcase } from "@/components/StackShowcase";
+import { EngineeringManifesto } from "@/components/EngineeringManifesto";
+import { CaseStudySection } from "@/components/CaseStudySection";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export default function Home() {
@@ -12,9 +14,11 @@ export default function Home() {
       <HeroSection />
       <SocialProofTape />
       <CoreIdentity />
+      <EngineeringManifesto />
       <ArcoCycle />
       <BentoBoxGrid />
       <StackShowcase />
+      <CaseStudySection />
       <WhatsAppButton />
     </main>
   );
