@@ -43,7 +43,7 @@ export function HeroSection() {
         <header className="absolute top-0 left-0 right-0 z-20 w-full max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Logo width={70} height={32} />
-            <span className="text-zinc-50 font-bold text-lg tracking-wider font-mono">
+            <span className="hidden sm:block text-zinc-50 font-bold text-lg tracking-wider font-mono">
               NIGHTFALL DS
             </span>
           </div>
@@ -90,14 +90,14 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="inline-flex items-center justify-center px-7 py-3 bg-zinc-100 hover:bg-white text-zinc-900 font-semibold text-sm rounded-full transition-all duration-200"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3 bg-zinc-100 hover:bg-white text-zinc-900 font-semibold text-sm rounded-full transition-all duration-200"
             >
               Agendar revisión de arquitectura
               <span className="ml-2">→</span>
             </button>
             <Link
               href="#stack"
-              className="inline-flex items-center justify-center px-7 py-3 border border-zinc-800 hover:border-zinc-600 text-zinc-300 hover:text-zinc-100 font-semibold text-sm rounded-full transition-all duration-200"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3 border border-zinc-800 hover:border-zinc-600 text-zinc-300 hover:text-zinc-100 font-semibold text-sm rounded-full transition-all duration-200"
             >
               Ver nuestro stack
             </Link>
