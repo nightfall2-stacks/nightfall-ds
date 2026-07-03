@@ -5,7 +5,7 @@ import { ArcoCycle } from "@/components/ArcoCycle";
 import { BentoBoxGrid } from "@/components/BentoBoxGrid";
 import { StackShowcase } from "@/components/StackShowcase";
 import { EngineeringManifesto } from "@/components/EngineeringManifesto";
-import { CaseStudySection } from "@/components/CaseStudySection";
+// import { CaseStudySection } from "@/components/CaseStudySection";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
       <ArcoCycle />
       <BentoBoxGrid />
       <StackShowcase />
-      <CaseStudySection />
+      {/* <CaseStudySection /> */}
       <WhatsAppButton />
     </main>
   );
