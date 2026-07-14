@@ -70,7 +70,7 @@ export function HeroSection() {
 
           {/* H1 */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-zinc-50 leading-[1.1] tracking-tight">
-            Código limpio.
+            Lo que tu.
             <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-orange-600">
               Arquitectura que escala.
@@ -104,7 +104,7 @@ export function HeroSection() {
           </div>
 
           <p className="text-xs text-zinc-600">
-            30 min con nuestro equipo técnico. Sin pitch de ventas.
+            Con solo 30 min con nuestro equipo técnico.
           </p>
 
           {/* Social Links */}
@@ -167,7 +167,7 @@ export function HeroSection() {
                     />
                     <ValidationError prefix="Name" field="name" errors={state.errors} className="text-xs text-red-400 mt-1" />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-xs font-medium text-zinc-400 mb-1">
                       Correo electrónico corporativo
