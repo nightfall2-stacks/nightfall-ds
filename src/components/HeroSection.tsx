@@ -59,7 +59,7 @@ export function HeroSection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-orange-500/10 blur-[120px] rounded-full pointer-events-none z-0" />
 
         {/* Content */}
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-6 fade-down mt-16">
+        <div className="relative z-10 max-w-4xl mx-auto px-8 text-center space-y-8 fade-down mt-24">
           {/* Badge */}
           <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full border border-orange-500/30 text-orange-400/90 bg-orange-500/5 w-fit mx-auto">
             <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
@@ -70,41 +70,37 @@ export function HeroSection() {
 
           {/* H1 */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-zinc-50 leading-[1.1] tracking-tight">
-            Lo que tu.
+            Software a medida.
             <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-orange-600">
               Arquitectura que escala.
             </span>
-            <br />
-            <span className="text-zinc-500">Sin deuda técnica oculta.</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-base md:text-lg text-zinc-400 max-w-xl mx-auto leading-relaxed">
-            No somos una agencia. Construimos sistemas B2B desde cero con un
-            stack definido: Next.js, Node, PostgreSQL, infraestructura en la
-            nube. Tests automatizados, deploys reproducibles, código que es tuyo.
+            Construimos sistemas B2B robustos. Next.js, Node y PostgreSQL. Tests automatizados y deploys continuos. Entregamos código de calidad, sin excusas.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-2">
             <button
               onClick={() => setIsModalOpen(true)}
               className="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3 bg-zinc-100 hover:bg-white text-zinc-900 font-semibold text-sm rounded-full transition-all duration-200"
             >
-              Agendar revisión de arquitectura
+              Hablemos de tu proyecto
               <span className="ml-2">→</span>
             </button>
             <Link
               href="#stack"
               className="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3 border border-zinc-800 hover:border-zinc-600 text-zinc-300 hover:text-zinc-100 font-semibold text-sm rounded-full transition-all duration-200"
             >
-              Ver nuestro stack
+              Ver tecnologías
             </Link>
           </div>
 
           <p className="text-xs text-zinc-600">
-            Con solo 30 min con nuestro equipo técnico.
+            Agenda una llamada de 30 min con el equipo.
           </p>
 
           {/* Social Links */}
@@ -121,8 +117,6 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Bottom border */}
-        <div className="absolute bottom-0 w-full h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent" />
       </section>
 
       {/* Modal */}

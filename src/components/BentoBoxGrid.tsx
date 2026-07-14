@@ -15,33 +15,33 @@ const solutionCards: Card[] = [
   {
     id: "1",
     icon: Workflow,
-    title: "Automatización de procesos internos.",
+    title: "Automatización de Procesos",
     description:
-      "Si tu equipo copia datos entre sistemas, genera reportes manualmente o depende de Excel para operaciones críticas — eso es deuda operativa. La reemplazamos con pipelines automatizados y APIs que conectan tus sistemas. ROI medido en horas-persona recuperadas.",
+      "Reemplazamos tareas manuales con pipelines y APIs robustas. Recupera horas de trabajo de tu equipo.",
     wide: true,
   },
   {
     id: "2",
     icon: Bot,
-    title: "Agentes IA en producción.",
+    title: "Agentes IA Integrados",
     description:
-      "Agentes con LLMs fine-tuned para tareas específicas: clasificación de tickets, extracción de datos, soporte L1 automatizado. Con guardrails, observabilidad y fallbacks definidos.",
+      "Modelos LLM para tareas específicas: clasificación, extracción y soporte automatizado con seguridad.",
     wide: false,
   },
   {
     id: "3",
     icon: ShieldCheck,
-    title: "Seguridad desde la arquitectura.",
+    title: "Seguridad por Diseño",
     description:
-      "HTTPS everywhere, secrets en vault, menor privilegio, JWT con refresh tokens rotados, audit logs inmutables. Está en cada capa desde el primer commit.",
+      "HTTPS, rotación de tokens, logs de auditoría y gestión de secretos en cada capa del sistema.",
     wide: false,
   },
   {
     id: "4",
     icon: LayoutDashboard,
-    title: "Plataformas B2B a medida.",
+    title: "Plataformas B2B a Medida",
     description:
-      "ERPs, CRMs internos, portales de proveedores — software que tu equipo usa 8 horas al día y no existe como SaaS para tu industria. Lo diseñamos contigo, lo construimos con nuestro stack, y te entregamos el código. Sin vendor lock-in.",
+      "Creamos el software interno que tu empresa necesita sin depender de licencias externas. El código es tuyo.",
     wide: true,
   },
 ];
@@ -100,16 +100,15 @@ export function BentoBoxGrid() {
         {/* Section heading */}
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-zinc-50 mb-3">
-            Lo que construimos.
+            Soluciones
           </h2>
           <p className="text-zinc-400 max-w-xl">
-            Software que resuelve problemas reales de operación. Sin plantillas,
-            sin WordPress disfrazado, sin dependencia de terceros.
+            Desarrollamos software para resolver problemas operativos reales, sin depender de plantillas.
           </p>
         </div>
 
         {/* Bento grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {solutionCards.map((card) => (
             <BentoCard key={card.id} card={card} />
           ))}

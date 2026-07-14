@@ -5,35 +5,35 @@ import { useEffect, useRef } from "react";
 const manifestoPoints = [
   {
     num: "I",
-    title: "Cada línea de código pasa por otra persona.",
-    subtitle: "Code Review obligatorio via Pull Requests",
+    title: "Code Review Obligatorio",
+    subtitle: "Revisiones en cada Pull Request",
     description:
-      "Ningún commit llega a producción sin ser revisado por al menos un ingeniero que no lo escribió. GitHub con branch protection: main está bloqueado, PRs requieren aprobación y CI verde, force-push prohibido. Sin excepciones.",
-    tags: ["Branch protection", "Approval requerido", "CI verde obligatorio", "No force-push"],
+      "Ningún commit llega a producción sin revisión. Bloqueamos la rama main, requerimos aprobación y CI verde.",
+    tags: ["Branch protection", "Aprobación requerida", "CI/CD"],
   },
   {
     num: "II",
-    title: "Si no tiene test, no existe.",
-    subtitle: "Testing automatizado desde el Sprint 1",
+    title: "Testing Automatizado",
+    subtitle: "Calidad desde el día 1",
     description:
-      "Tests unitarios para lógica de negocio, tests de integración para APIs, y tests E2E para flujos críticos. CI no permite mergear si la cobertura baja del umbral. Los bugs aparecen en el pipeline, no en producción un viernes a las 11 PM.",
-    tags: ["Unit", "Integration", "E2E", "Cobertura enforced", "CI bloquea si falla"],
+      "Tests unitarios, de integración y E2E. Si la cobertura baja, el despliegue se bloquea automáticamente.",
+    tags: ["Unit", "Integration", "E2E", "CI bloqueado"],
   },
   {
     num: "III",
-    title: "Deploy el día uno. Deploy todos los días.",
-    subtitle: "CI/CD — Integración y Entrega Continua",
+    title: "Despliegues Continuos",
+    subtitle: "CI/CD en cada cambio",
     description:
-      "El pipeline se configura antes de la primera feature. Push a main → tests → build Docker → staging → smoke tests → producción → rollback automático si fallan health checks. El deploy más peligroso es el que se hace una vez al mes con 47 cambios acumulados.",
-    tags: ["GitHub Actions", "Docker", "Staging automático", "Rollback < 60 seg"],
+      "Automatizamos desde el código hasta la nube. Tests, build y despliegue rápido con rollback automático.",
+    tags: ["GitHub Actions", "Docker", "Rollback automático"],
   },
   {
     num: "IV",
-    title: "La deuda técnica se paga o se documenta.",
-    subtitle: "Gestión explícita de Technical Debt",
+    title: "Gestión de Deuda Técnica",
+    subtitle: "Se paga o se documenta",
     description:
-      "Registro explícito de toda deuda técnica con contexto, riesgo e impacto. Porcentaje fijo por sprint para pagarla. Cuando nos dicen 'pero funciona', respondemos: 'Hoy funciona. En 6 meses, esa query sin índice va a tumbar tu base de datos un lunes a las 9 AM.'",
-    tags: ["Backlog de deuda", "% fijo por sprint", "Documentada con riesgo e impacto"],
+      "Registramos la deuda técnica con su riesgo e impacto, y dedicamos tiempo en cada iteración para resolverla.",
+    tags: ["Backlog", "Mantenimiento proactivo"],
   },
 ];
 
@@ -66,11 +66,10 @@ export function EngineeringManifesto() {
             <span className="text-xs font-mono text-zinc-400">#!/bin/manifesto</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-zinc-50 mb-4">
-            Manifiesto de Ingeniería
+            Nuestro Estándar
           </h2>
           <p className="text-zinc-400 leading-relaxed">
-            Cuatro compromisos no negociables. No son aspiracionales — son
-            requisitos mínimos para que nuestro código llegue a producción.
+            Requisitos mínimos para llevar código a producción. Sin excepciones.
           </p>
         </div>
 
